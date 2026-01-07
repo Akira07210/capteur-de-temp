@@ -117,6 +117,7 @@ void SerialPortReader::handleReadyRead()
         //Supprimer seulement jusqu à la prochaine tete
         m_readData.remove(0,position_head);
         trame_valide= false;
+        // ATTENTION si deux tetes s'enchainent le programme crée un cas boquant => à corriger
     }
 
     //---------------------------------------------------------------------------
